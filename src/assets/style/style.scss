@@ -1,0 +1,191 @@
+$blue: #409eff;
+$lightBlue: #b3d8ff;
+
+#app {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background: #fff;
+}
+
+.flex-row {
+	display: flex;
+}
+
+.align-right {
+	text-align: right;
+}
+
+
+// 后台登录页面样式
+.admin-login-wrap {
+	width: 100%;
+	height: 100%;
+	padding-top: 70px;
+	background-image: url(../images/login-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+
+	h1 {
+		color: #99a9bf;
+	    font-size: 35px; 
+	    font-weight: normal;
+	    margin: 35px 0;
+
+		span {
+			color: #1D8CE0;
+			font-weight: bold;
+		}
+	}
+
+	form {
+		width: 400px;
+		margin: 0 auto;
+		color: #fff;
+
+		.form-item {
+			width: 100%;
+			@extend .flex-row;
+			height: 34px;
+			line-height: 34px;
+
+			i {
+				height: 100%;
+				font-size: 16px;
+				padding-top: 9px;
+				padding-right: 6px;
+			}
+
+			input {
+				flex-grow: 1;
+				border: none;
+				border-bottom: 1px solid #dcdfe6;
+				background: transparent;
+				padding: 9px 4px;
+				line-height: 20px;
+			}
+		}
+
+		.form-item-error {
+			height: 30px;
+			line-height: 30px;
+			color: #f56c6c;
+    		font-size: 12px;
+			text-align: left;
+			padding-left: 24px;
+		}
+	}
+}
+
+.admin-index-wrap {
+	width: 100%;
+	height: 100%;
+
+	.logo {
+		width: 100%;
+		height: 64px;
+		@extend .flex-row;
+		justify-content: center;
+		align-items: center; 
+
+		img {
+			width: 189px;
+		}
+	}
+
+	.default-logo {
+		width: 40px;
+		margin-left: 10px;
+	}
+
+	.bg-white {
+		background: #fff;
+	}
+}
+
+.list-top-opt {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	.opt-icon {
+		font-size: 28px;
+		margin-left: 4px;
+		transition: all .2s;
+		color: #b3d8ff;
+
+		&:hover {
+			color: #409EFF;
+		}
+	}
+}
+
+.opt-icon-wrap {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	border: 1px solid $lightBlue;
+}
+
+
+.td-opt {
+
+    a {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 12px;
+        line-height: 1;
+        padding: 7px;
+        border-radius: 50%;
+        border: 1px solid #409EFF; 
+        background-color: #ecf5ff;
+        color: #409EFF;
+        transition: all .2s;
+        width: 28px;
+        height: 28px;
+
+        &:hover {
+        	background: #409EFF;
+		    border-color: #409EFF;
+		    color: #fff;
+        }
+
+        &:last-child {
+            margin-left: 0;
+        }
+
+        &.warn {
+            background-color: #fef0f0;
+            color: #f56c6c;
+            border-color: #f56c6c;
+
+            &:hover {
+            	background: #f56c6c;
+			    border-color: #f56c6c;
+			    color: #fff;
+            }
+        }
+    }
+}
+
+.selected-project {
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	line-height: 32px;
+
+	.name {
+		text-align: center;
+		border-right: 1px solid #d9d9d9;
+		background: #fafafa;
+	}
+
+	.val {
+		input {
+			border: none; 
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}
